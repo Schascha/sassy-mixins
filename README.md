@@ -84,6 +84,12 @@ Compiles to:
 }
 ```
 
+Some font types are missing? Just update the `$exts` property:
+
+```scss
+@include font-face('Only-Woff', '../fonts/OnlyWoff', $exts: woff2 woff);
+```
+
 ### Hidden
 
 Only display content to screen readers
