@@ -1,6 +1,6 @@
 # sassy-position
 
-Just a Scss position mixin
+Just a Sass position mixin
 
 ## Usage
 
