@@ -2,6 +2,17 @@
 
 Just some Sass mixins
 
+Mixins:
+- [Clearfix](#clearfix)
+- [Embed](#embed)
+- [Font-Face](#font-face)
+- [Hidden](#hidden)
+- [Position](#position)
+- [Text-Truncate](#text-truncate)
+
+Functions:
+- [Font-Size](#font-size)
+
 ## Usage
 
 ```scss
@@ -181,10 +192,7 @@ Compiles to:
 }
 ```
 
-Further examples:
-[test.scss](./test/)
-
-## Font-Size helper function
+### Font-Size helper function
 
 ```scss
 @import 'sassy-mixins/functions';
@@ -193,7 +201,7 @@ $font-size-base: 16px;  // Define base font-size
 
 h1 {
 	font-size: rem(30);
-	
+
 	> span {
 		font-size: em(24, 30);
 	}
@@ -211,6 +219,11 @@ h1 > span {
 	font-size: 0.8em;
 }
 ```
+
+---
+
+Further examples:
+[test.scss](./test/)
 
 ## License
 
