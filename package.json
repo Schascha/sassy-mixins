@@ -4,7 +4,7 @@
   "description": "Just a Scss position mixin",
   "main": "src/_position.scss",
   "scripts": {
-    "build": "node-sass src -o dist",
+    "build": "node-sass --output-style expanded src -o dist",
     "dev": "npm run build && npm run build -- -w"
   },
   "author": "Sascha Künstler <contact.schascha@gmail.com> (http://www.schaschaweb.de)",
