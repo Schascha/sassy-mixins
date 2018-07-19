@@ -10,7 +10,7 @@
   ],
   "main": "_mixins.scss",
   "scripts": {
-    "build": "node-sass --output-style expanded test -o dist",
+    "build": "node-sass --output-style expanded tests -o dist",
     "dev": "npm run build && npm run build -- -w"
   },
   "author": "Sascha Künstler <contact.schascha@gmail.com> (http://www.schaschaweb.de)",

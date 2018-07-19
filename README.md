@@ -193,13 +193,15 @@ Compiles to:
 
 ## Functions
 
+```scss
+@import 'sassy-mixins/functions';
+```
+
 ### Font-Size
 
 A font-size helper function for em and rem units
 
 ```scss
-@import 'sassy-mixins/functions';
-
 $font-size-base: 16px;  // Define base font-size
 
 h1 {
