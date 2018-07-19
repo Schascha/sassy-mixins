@@ -1,0 +1,24 @@
+@import '../mixins/embed';
+
+.embed {
+	@include embed-container();
+
+	iframe,
+	embed,
+	object,
+	video {
+		@include embed-element();
+	}
+}
+
+.a {
+	@include embed-container(5 2);
+}
+
+.b {
+	@include embed-container(percentage(1 / 3));
+}
+
+.c {
+	@include embed-container(50%);
+}

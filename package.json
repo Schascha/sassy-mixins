@@ -1,14 +1,14 @@
 {
-  "name": "sassy-position",
+  "name": "sassy-mixins",
   "version": "0.0.1",
-  "description": "Just a Sass position mixin",
+  "description": "Just some Sass mixins",
   "keywords": [
     "sass",
     "scss",
     "css",
     "mixin"
   ],
-  "main": "_position.scss",
+  "main": "_mixins.scss",
   "scripts": {
     "build": "node-sass --output-style expanded test -o dist",
     "dev": "npm run build && npm run build -- -w"

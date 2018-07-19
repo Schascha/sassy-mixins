@@ -1,0 +1,5 @@
+@import '../mixins/hidden';
+
+.hidden {
+	@include hidden();
+}

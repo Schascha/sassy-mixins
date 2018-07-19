@@ -1,4 +1,4 @@
-@import 'position';
+@import '../mixins/position';
 
 .foo {
 	@include absolute(top 0 left 1rem);

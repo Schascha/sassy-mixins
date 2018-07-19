@@ -1,0 +1,10 @@
+@import '../mixins/font-face';
+
+// @mixin font-face($family, $path: $family, $weight: normal, $style: normal, $svg: '', $exts: eot woff2 woff ttf svg) {
+@include font-face('OpenSans', '../fonts/OpenSans-Regular', $svg: 'OpenSansRegular');
+
+@include font-face('OpenSans', '../fonts/OpenSans-Bold', bold, $svg: 'OpenSansBold');
+
+@include font-face('OpenSans', '../fonts/OpenSans-Italic', normal, italic, 'OpenSansItalic');
+
+@include font-face('Only-Woff', '../fonts/OnlyWoff', $exts: woff2 woff);
