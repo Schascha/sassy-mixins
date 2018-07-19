@@ -32,7 +32,7 @@ Compiles to:
 ```
 
 Further examples:
-[test.scss](./src/test.scss)
+[test.scss](./test/test.scss)
 
 ## License
 
