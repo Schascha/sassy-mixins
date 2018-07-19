@@ -12,6 +12,8 @@ Just some Sass mixins
 - [Functions](#functions)
 	- [Font-Size](#font-size)
 
+[Further examples](./tests/)
+
 ## Mixins
 
 ```scss
@@ -224,10 +226,6 @@ h1 > span {
 	font-size: 0.8em;
 }
 ```
-
----
-
-[Further examples](./test/)
 
 ## License
 
