@@ -1,0 +1,15 @@
+{
+  "name": "sassy-position",
+  "version": "0.0.1",
+  "description": "Just a Scss position mixin",
+  "main": "src/_position.scss",
+  "scripts": {
+    "build": "node-sass src -o dist",
+    "dev": "npm run build && npm run build -- -w"
+  },
+  "author": "Sascha Künstler <contact.schascha@gmail.com> (http://www.schaschaweb.de)",
+  "license": "MIT",
+  "devDependencies": {
+    "node-sass": "^4.9.2"
+  }
+}
