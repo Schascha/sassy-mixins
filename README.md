@@ -1,4 +1,4 @@
-# sassy-position
+# sassy-mixins
 
 Just some Sass mixins
 
