@@ -1,0 +1,49 @@
+@import 'position';
+
+.a {
+	@include position(absolute);
+}
+
+.b {
+	@include absolute();
+}
+
+.c {
+	@include absolute(top 0);
+}
+
+.d {
+	@include absolute(top 3rem right 5px bottom 50% left 10em);
+}
+
+.e {
+	@include relative(top right bottom left);
+}
+
+.f {
+	@include relative(bottom 100%);
+}
+
+.g {
+	@include fixed(top 'string' foo 'bar');
+}
+
+.h {
+	@include fixed(top auto right initial left inherit bottom 'auto');
+}
+
+.i {
+	@include sticky(10px);
+}
+
+.j {
+	@include sticky(10px auto);
+}
+
+.k {
+	@include sticky(10px auto 3rem);
+}
+
+.l {
+	@include sticky(10px auto 3rem 10%);
+}
