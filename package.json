@@ -1,11 +1,12 @@
 {
   "name": "sassy-position",
   "version": "0.0.1",
-  "description": "Just a Scss position mixin",
+  "description": "Just a Sass position mixin",
   "keywords": [
     "sass",
     "scss",
-    "css"
+    "css",
+    "mixin"
   ],
   "main": "_position.scss",
   "scripts": {
