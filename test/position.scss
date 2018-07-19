@@ -1,18 +1,18 @@
 @import '../mixins/position';
 
-.foo {
+.absolute {
 	@include absolute(top 0 left 1rem);
 }
 
-.bar {
+.relative {
 	@include relative(left 50%);
 }
 
-.baz {
+.fixed {
 	@include fixed(0 0 0 0);
 }
 
-.qux {
+.sticky {
 	@include sticky(top);
 }
 

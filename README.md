@@ -5,7 +5,7 @@ Just some Sass mixins
 ## Usage
 
 ```scss
-@import 'mixins';
+@import 'sassy-mixins/mixins';
 ```
 
 ### Clearfix
@@ -28,8 +28,8 @@ Compiles to:
 
 ### Embed
 
-Responsive embeds, like videos or iframes. By default the ratio is 16:9. Other options are
-'4:3', '1:2', '2:1', '1:1' or custom numbers. Also excepts lists.
+Responsive embeds, like videos or iFrames. By default the ratio is 16:9. Other options are
+'4:3', '1:2', '2:1', '1:1' or custom numbers. Also accepts lists.
 
 ```scss
 .embed {
@@ -112,19 +112,19 @@ Compiles to:
 ### Position
 
 ```scss
-.foo {
+.absolute {
 	@include absolute(top 0 left 1rem);
 }
 
-.bar {
+.relative {
 	@include relative(left 50%);
 }
 
-.baz {
+.fixed {
 	@include fixed(0 0 0 0);
 }
 
-.qux {
+.sticky {
 	@include sticky(top);
 }
 ```
@@ -132,18 +132,18 @@ Compiles to:
 Compiles to:
 
 ```css
-.foo {
+.absolute {
 	position: absolute;
 	top: 0;
 	left: 1rem;
 }
 
-.bar {
+.relative {
 	position: relative;
 	left: 50%;
 }
 
-.baz {
+.fixed {
 	position: fixed;
 	top: 0;
 	right: 0;
@@ -151,7 +151,7 @@ Compiles to:
 	left: 0;
 }
 
-.qux {
+.sticky {
 	position: sticky;
 	top: 0;
 }
