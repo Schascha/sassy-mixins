@@ -2,47 +2,50 @@
 	$offsets: top right bottom left;
 	position: $position;
 
-	// If there were no offsets
-	@if length($args) and not (index($args, top) or index($args, right) or index($args, bottom) or index($args, left)) {
-		$positions: ();
+	@if length($args) {
 
-		@each $arg in $args {
-			$i: index($args, $arg);
-			$positions: append($positions, nth($offsets, $i));  // Append offset
-			$positions: append($positions, nth($args, $i));  // Append argument
-		}
+		// If there were no offsets
+		@if not (index($args, top) or index($args, right) or index($args, bottom) or index($args, left)) {
+			$positions: ();
 
-		$args: $positions;
-	}
-
-	@each $offset in $offsets {
-		$i: index($args, $offset);
-
-		// If offset exists
-		@if $i {
-
-			// If offset is at last position
-			@if $i == length($args) {
-				#{$offset}: 0;
+			@each $arg in $args {
+				$i: index($args, $arg);
+				$positions: append($positions, nth($offsets, $i));  // Append offset
+				$positions: append($positions, nth($args, $i));  // Append argument
 			}
 
-			// If offset follows by a value
-			@else if $i + 1 <= length($args) {
-				$value: nth($args, $i + 1);
+			$args: $positions;
+		}
 
-				// If value is a offset
-				@if index($offsets, $value) {
+		@each $offset in $offsets {
+			$i: index($args, $offset);
+
+			// If offset exists
+			@if $i {
+
+				// If offset is at last position
+				@if $i == length($args) {
 					#{$offset}: 0;
 				}
 
-				// If value is auto, initial or inherit
-				@else if index(auto initial inherit, $value) {
-					#{$offset}: unquote($value);
-				}
+				// If offset follows by a value
+				@else if $i + 1 <= length($args) {
+					$value: nth($args, $i + 1);
 
-				// If value is a number
-				@else if type-of($value) == number and ($value == 0 or not unitless($value)) {
-					#{$offset}: $value;
+					// If value is a offset
+					@if index($offsets, $value) {
+						#{$offset}: 0;
+					}
+
+					// If value is auto, initial or inherit
+					@else if index(auto initial inherit, $value) {
+						#{$offset}: unquote($value);
+					}
+
+					// If value is a number
+					@else if type-of($value) == number and ($value == 0 or not unitless($value)) {
+						#{$offset}: $value;
+					}
 				}
 			}
 		}
