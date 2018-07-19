@@ -192,7 +192,9 @@ Compiles to:
 }
 ```
 
-### Font-Size helper function
+### Font-Size
+
+A font-size helper function for em and rem units
 
 ```scss
 @import 'sassy-mixins/functions';
