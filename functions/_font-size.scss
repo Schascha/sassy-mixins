@@ -1,0 +1,21 @@
+$font-size-base: 16px !default;
+
+@function font-size($pixels, $context: $font-size-base) {
+	@if (unitless($pixels)) {
+		$pixels: $pixels * 1px;
+	}
+
+	@if (unitless($context)) {
+		$context: $context * 1px;
+	}
+
+	@return $pixels / $context;
+}
+
+@function em($pixels, $context: $font-size-base) {
+	@return font-size($pixels, $context) * 1em;
+}
+
+@function rem($pixels, $context: $font-size-base) {
+	@return font-size($pixels, $context) * 1rem;
+}

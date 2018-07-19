@@ -1,0 +1,9 @@
+@import '../functions/font-size';
+
+h1 {
+	font-size: rem(30);
+
+	> span {
+		font-size: em(24, 30);
+	}
+}

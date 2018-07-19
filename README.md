@@ -184,6 +184,34 @@ Compiles to:
 Further examples:
 [test.scss](./test/)
 
+## Font-Size helper function
+
+```scss
+@import 'sassy-mixins/functions';
+
+$font-size-base: 16px;  // Define base font-size
+
+h1 {
+	font-size: rem(30);
+	
+	> span {
+		font-size: em(24, 30);
+	}
+}
+```
+
+Compiles to:
+
+```css
+h1 {
+	font-size: 1.875rem;
+}
+
+h1 > span {
+	font-size: 0.8em;
+}
+```
+
 ## License
 
 [MIT](./LICENSE)
