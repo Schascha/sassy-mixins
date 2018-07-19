@@ -2,14 +2,13 @@
 	$offsets: top right bottom left;
 	position: $position;
 
-	@if length($args) {
+	@if length($args) > 0 {
 
 		// If there were no offsets
 		@if not (index($args, top) or index($args, right) or index($args, bottom) or index($args, left)) {
 			$positions: ();
 
-			@each $arg in $args {
-				$i: index($args, $arg);
+			@for $i from 1 through length($args) {
 				$positions: append($positions, nth($offsets, $i));  // Append offset
 				$positions: append($positions, nth($args, $i));  // Append argument
 			}

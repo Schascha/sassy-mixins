@@ -12,7 +12,15 @@ Just a Scss position mixin
 }
 
 .bar {
-	@include relative(top);
+	@include relative(left 50%);
+}
+
+.baz {
+	@include fixed(0 0 0 0);
+}
+
+.qux {
+	@include sticky(top);
 }
 ```
 
@@ -27,6 +35,16 @@ Compiles to:
 
 .bar {
 	position: relative;
+	left: 50%;
+}
+
+.baz {
+	position: fixed;
+	top: 0;
+}
+
+.qux {
+	position: sticky;
 	top: 0;
 }
 ```

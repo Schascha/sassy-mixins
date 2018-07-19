@@ -1,5 +1,21 @@
 @import 'position';
 
+.foo {
+	@include absolute(top 0 left 1rem);
+}
+
+.bar {
+	@include relative(left 50%);
+}
+
+.baz {
+	@include fixed(0 0 0 0);
+}
+
+.qux {
+	@include sticky(top);
+}
+
 .a {
 	@include position(absolute);
 }
