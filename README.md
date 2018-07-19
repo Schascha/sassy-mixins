@@ -2,18 +2,17 @@
 
 Just some Sass mixins
 
-Mixins:
-- [Clearfix](#clearfix)
-- [Embed](#embed)
-- [Font-Face](#font-face)
-- [Hidden](#hidden)
-- [Position](#position)
-- [Text-Truncate](#text-truncate)
+- [Mixins](#mixins)
+	- [Clearfix](#clearfix)
+	- [Embed](#embed)
+	- [Font-Face](#font-face)
+	- [Hidden](#hidden)
+	- [Position](#position)
+	- [Text-Truncate](#text-truncate)
+- [Functions](#functions)
+	- [Font-Size](#font-size)
 
-Functions:
-- [Font-Size](#font-size)
-
-## Usage
+## Mixins
 
 ```scss
 @import 'sassy-mixins/mixins';
@@ -192,6 +191,8 @@ Compiles to:
 }
 ```
 
+## Functions
+
 ### Font-Size
 
 A font-size helper function for em and rem units
@@ -224,8 +225,7 @@ h1 > span {
 
 ---
 
-Further examples:
-[test.scss](./test/)
+[Further examples](./test/)
 
 ## License
 
