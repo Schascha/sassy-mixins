@@ -1,6 +1,6 @@
 @import '../mixins/breakpoint';
 
-.example {
+.breakpoint {
 	@include breakpoint(mobile) {
 		background: green;
 	}
@@ -22,7 +22,7 @@
 	}
 }
 
-.example {
+.breakpoint {
 	@include mq($mobile) {
 		background: green;
 	}
@@ -36,7 +36,7 @@
 	}
 
 	@include mq($tablet, $desk - 1px) {
-		background: yellow;
+		background: orange;
 	}
 
 	@include mq($max: $mobile - 1px) {
