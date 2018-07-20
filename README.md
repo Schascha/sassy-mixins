@@ -64,9 +64,9 @@ $breakpoints: (
 Or if your like a quick min/max solution:
 
 ```scss
-$mobile: 480px !default;
-$tablet: 768px !default;
-$desk: 1024px !default;
+$mobile: 600px !default;
+$tablet: 900px !default;
+$desk: 1200px !default;
 
 .example {
 	@include mq($mobile) {
