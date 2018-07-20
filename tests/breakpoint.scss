@@ -1,0 +1,45 @@
+@import '../mixins/breakpoint';
+
+.example {
+	@include breakpoint(mobile) {
+		background: green;
+	}
+
+	@include breakpoint(tablet) {
+		background: blue;
+	}
+
+	@include breakpoint(desk) {
+		background: yellow;
+	}
+
+	@include breakpoint(desk-only) {
+		background: orange;
+	}
+
+	@include breakpoint(mobile-down) {
+		background: purple;
+	}
+}
+
+.example {
+	@include mq($mobile) {
+		background: green;
+	}
+
+	@include mq($tablet) {
+		background: blue;
+	}
+
+	@include mq($desk) {
+		background: yellow;
+	}
+
+	@include mq($tablet, $desk - 1px) {
+		background: yellow;
+	}
+
+	@include mq($max: $mobile - 1px) {
+		background: purple;
+	}
+}

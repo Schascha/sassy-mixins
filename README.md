@@ -3,6 +3,7 @@
 Just some Sass mixins
 
 - [Mixins](#mixins)
+	- [Breakpoint](#breakpoint)
 	- [Clearfix](#clearfix)
 	- [Embed](#embed)
 	- [Font-Face](#font-face)
@@ -18,6 +19,110 @@ Just some Sass mixins
 
 ```scss
 @import 'sassy-mixins/mixins';
+```
+
+### Breakpoint
+
+Helper to organize your media queries. If you prefer writing lists:
+
+```scss
+$breakpoints: (
+	'mobile': 'screen and (min-width: #{$mobile})',
+	'mobile-down': 'screen and (max-width: #{$mobile - 1px})',
+	'tablet': 'screen and (min-width: #{$tablet})',
+	'tablet-only': 'screen and (min-width: #{$mobile}) and (max-width: #{$tablet - 1px})',
+	'tablet-down': 'screen and (max-width: #{$tablet - 1px})',
+	'desk': 'screen and (min-width: #{$desk})',
+	'desk-only': 'screen and (min-width: #{$tablet}) and (max-width: #{$desk - 1px})',
+	'desk-down': 'screen and (max-width: #{$desk - 1px})',
+	'retina': '(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx)'
+) !default;
+
+.example {
+	@include breakpoint(mobile) {
+		background: green;
+	}
+
+	@include breakpoint(tablet) {
+		background: blue;
+	}
+
+	@include breakpoint(desk) {
+		background: yellow;
+	}
+
+	@include breakpoint(desk-only) {
+		background: orange;
+	}
+
+	@include breakpoint(mobile-down) {
+		background: purple;
+	}
+}
+```
+
+Or if your like a quick min/max solution:
+
+```scss
+$mobile: 480px !default;
+$tablet: 768px !default;
+$desk: 1024px !default;
+
+.example {
+	@include mq($mobile) {
+		background: green;
+	}
+
+	@include mq($tablet) {
+		background: blue;
+	}
+
+	@include mq($desk) {
+		background: yellow;
+	}
+
+	@include mq($tablet, $desk - 1px) {
+		background: yellow;
+	}
+
+	@include mq($max: $mobile - 1px) {
+		background: purple;
+	}
+}
+```
+
+Compiles to:
+
+```css
+@media screen and (min-width: 480px) {
+	.example {
+		background: green;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.example {
+		background: blue;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.example {
+		background: yellow;
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+	.example {
+		background: yellow;
+	}
+}
+
+@media screen and (max-width: 479px) {
+	.example {
+		background: purple;
+	}
+}
 ```
 
 ### Clearfix
