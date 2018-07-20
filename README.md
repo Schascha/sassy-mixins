@@ -94,31 +94,31 @@ $desk: 1200px !default;
 Compiles to:
 
 ```css
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 600px) {
 	.breakpoint {
 		background: green;
 	}
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 900px) {
 	.breakpoint {
 		background: blue;
 	}
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1200px) {
 	.breakpoint {
 		background: yellow;
 	}
 }
 
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+@media screen and (min-width: 900px) and (max-width: 1199px) {
 	.breakpoint {
 		background: orange;
 	}
 }
 
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 599px) {
 	.breakpoint {
 		background: purple;
 	}
