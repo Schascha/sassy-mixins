@@ -38,7 +38,7 @@ $breakpoints: (
 	'retina': '(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx)'
 ) !default;
 
-.example {
+.breakpoint {
 	@include breakpoint(mobile) {
 		background: green;
 	}
@@ -68,7 +68,7 @@ $mobile: 480px !default;
 $tablet: 768px !default;
 $desk: 1024px !default;
 
-.example {
+.breakpoint {
 	@include mq($mobile) {
 		background: green;
 	}
@@ -82,7 +82,7 @@ $desk: 1024px !default;
 	}
 
 	@include mq($tablet, $desk - 1px) {
-		background: yellow;
+		background: orange;
 	}
 
 	@include mq($max: $mobile - 1px) {
@@ -95,31 +95,31 @@ Compiles to:
 
 ```css
 @media screen and (min-width: 480px) {
-	.example {
+	.breakpoint {
 		background: green;
 	}
 }
 
 @media screen and (min-width: 768px) {
-	.example {
+	.breakpoint {
 		background: blue;
 	}
 }
 
 @media screen and (min-width: 1024px) {
-	.example {
+	.breakpoint {
 		background: yellow;
 	}
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-	.example {
-		background: yellow;
+	.breakpoint {
+		background: orange;
 	}
 }
 
 @media screen and (max-width: 479px) {
-	.example {
+	.breakpoint {
 		background: purple;
 	}
 }
