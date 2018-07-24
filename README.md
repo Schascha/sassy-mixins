@@ -207,6 +207,17 @@ Some font types are missing? Just update the `$exts` property:
 @include font-face('Only-Woff', '../fonts/OnlyWoff', $exts: woff2 woff);
 ```
 
+Compiles to:
+
+```css
+@font-face {
+	font-family: "Only-Woff";
+	src: url("../fonts/OnlyWoff.woff2") format("woff2"), url("../fonts/OnlyWoff.woff") format("woff");
+	font-style: normal;
+	font-weight: normal;
+}
+```
+
 ### Hidden
 
 Only display content to screen readers
