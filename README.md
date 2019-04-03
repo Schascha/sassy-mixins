@@ -10,6 +10,7 @@ Just some Sass mixins
 	- [Hidden](#hidden)
 	- [Position](#position)
 	- [Text-Truncate](#text-truncate)
+	- [Theme](#theme)
 - [Functions](#functions)
 	- [Font-Size](#font-size)
 
@@ -220,7 +221,7 @@ Compiles to:
 
 ### Hidden
 
-Only display content to screen readers
+Only display content to screen readers.
 
 ```scss
 .hidden {
@@ -309,6 +310,28 @@ Compiles to:
 }
 ```
 
+### Theme
+
+Add styles depending on a theme variable.
+
+```scss
+$theme: 'foo';
+
+.theme {
+	@include theme('foo') {
+		background: red;
+	}
+}
+```
+
+Compiles to:
+
+```css
+.theme {
+	background: red;
+}
+```
+
 ## Functions
 
 ```scss
@@ -317,7 +340,7 @@ Compiles to:
 
 ### Font-Size
 
-A font-size helper function for em and rem units
+A font-size helper function for em and rem units.
 
 ```scss
 $font-size-base: 16px;  // Define base font-size

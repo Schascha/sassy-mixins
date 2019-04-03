@@ -1,0 +1,17 @@
+@import '../mixins/theme';
+
+$theme: 'foo';
+
+.theme {
+	@include theme('foo') {
+		background: red;
+	}
+}
+
+$theme: 'bar';
+
+.theme {
+	@include theme('bar', 'baz') {
+		background: blue;
+	}
+}

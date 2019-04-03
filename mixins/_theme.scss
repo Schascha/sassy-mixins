@@ -1,0 +1,9 @@
+$theme: '' !default;
+
+@mixin theme($themes...) {
+	@each $name in $themes {
+		@if $name == $theme {
+			@content;
+		}
+	}
+}
