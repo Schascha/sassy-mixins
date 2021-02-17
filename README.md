@@ -1,6 +1,8 @@
 # sassy-mixins
 
-Just some Sass mixins
+![Build](https://github.com/Schascha/sassy-mixins/workflows/Build/badge.svg)
+
+> Just some Sass mixins
 
 - [Mixins](#mixins)
 	- [Breakpoint](#breakpoint)
