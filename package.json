@@ -1,5 +1,5 @@
 {
-  "name": "sassy-mixins",
+  "name": "@schascha/sassy-mixins",
   "version": "0.0.1",
   "description": "Just some Sass mixins",
   "keywords": [
@@ -8,14 +8,20 @@
     "css",
     "mixin"
   ],
-  "main": "_mixins.scss",
+  "main": "src/_mixins.scss",
   "scripts": {
-    "build": "node-sass --output-style expanded tests -o dist",
-    "dev": "npm run build && npm run build -- -w"
+    "build": "sass --style expanded tests:dist",
+    "start": "npm run build -- --watch",
+    "test": "stylelint **/*.scss --syntax scss"
   },
   "author": "Sascha Künstler <contact.schascha@gmail.com> (http://www.schaschaweb.de)",
   "license": "MIT",
   "devDependencies": {
-    "node-sass": "^4.9.2"
-  }
+    "@schascha/stylelint-config": "^0.0.3",
+    "sass": "^1.32.7",
+    "stylelint": "^13.10.0"
+  },
+	"exports": {
+		"./": "./src/"
+	}
 }

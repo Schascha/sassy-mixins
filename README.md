@@ -24,45 +24,7 @@ Just some Sass mixins
 
 ### Breakpoint
 
-Helper to organize your media queries. If you prefer writing lists:
-
-```scss
-$breakpoints: (
-	'mobile': 'screen and (min-width: #{$mobile})',
-	'mobile-down': 'screen and (max-width: #{$mobile - 1px})',
-	'tablet': 'screen and (min-width: #{$tablet})',
-	'tablet-only': 'screen and (min-width: #{$mobile}) and (max-width: #{$tablet - 1px})',
-	'tablet-down': 'screen and (max-width: #{$tablet - 1px})',
-	'desk': 'screen and (min-width: #{$desk})',
-	'desk-only': 'screen and (min-width: #{$tablet}) and (max-width: #{$desk - 1px})',
-	'desk-down': 'screen and (max-width: #{$desk - 1px})',
-	'retina': '(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx)'
-) !default;
-
-.breakpoint {
-	@include breakpoint(mobile) {
-		background: green;
-	}
-
-	@include breakpoint(tablet) {
-		background: blue;
-	}
-
-	@include breakpoint(desk) {
-		background: yellow;
-	}
-
-	@include breakpoint(desk-only) {
-		background: orange;
-	}
-
-	@include breakpoint(mobile-down) {
-		background: purple;
-	}
-}
-```
-
-Or if your like a quick min/max solution:
+Helper to organize your media queries.
 
 ```scss
 $mobile: 600px !default;
@@ -166,21 +128,21 @@ Compiles to:
 
 ```css
 .embed {
-	height: 0;
 	position: relative;
 	padding-bottom: 56.25%;
+	height: 0;
 }
 
 .embed iframe,
 .embed embed,
 .embed object,
 .embed video {
-	border: 0;
-	height: 100%;
-	left: 0;
 	position: absolute;
 	top: 0;
+	left: 0;
 	width: 100%;
+	height: 100%;
+	border: 0;
 }
 ```
 
@@ -197,8 +159,8 @@ Compiles to:
 	font-family: "OpenSans";
 	src: url("../fonts/OpenSans-Regular.eot");
 	src: url("../fonts/OpenSans-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-Regular.woff2") format("woff2"), url("../fonts/OpenSans-Regular.woff") format("woff"), url("../fonts/OpenSans-Regular.ttf") format("truetype"), url("../fonts/OpenSans-Regular.svg#OpenSansRegular") format("svg");
-	font-style: normal;
 	font-weight: normal;
+	font-style: normal;
 }
 ```
 
@@ -214,8 +176,8 @@ Compiles to:
 @font-face {
 	font-family: "Only-Woff";
 	src: url("../fonts/OnlyWoff.woff2") format("woff2"), url("../fonts/OnlyWoff.woff") format("woff");
-	font-style: normal;
 	font-weight: normal;
+	font-style: normal;
 }
 ```
 
@@ -233,14 +195,15 @@ Compiles to:
 
 ```css
 .hidden {
-	border: 0;
-	clip: rect(0, 0, 0, 0);
-	height: 1px;
 	overflow: hidden;
-	padding: 0;
 	position: absolute;
-	white-space: nowrap;
+	margin: -1px;
+	padding: 0;
 	width: 1px;
+	height: 1px;
+	clip: rect(0, 0, 0, 0);
+	border-width: 0;
+	white-space: nowrap;
 }
 ```
 
@@ -366,6 +329,16 @@ h1 > span {
 }
 ```
 
+## Bugs?
+
+Please let me know: https://github.com/Schascha/stylelint-config/issues
+
+## Buy me a Coffee :coffee:
+
+Support this project and [others](https://github.com/Schascha?tab=repositories) via [PayPal](https://www.paypal.me/LosZahlos). Thanks
+
 ## License
 
 [MIT](./LICENSE)
+
+Copyright (c) 2018 Sascha Künstler

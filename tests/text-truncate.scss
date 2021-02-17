@@ -1,4 +1,4 @@
-@import '../mixins/text-truncate';
+@import '../src/mixins/text-truncate';
 
 .text-truncate {
 	@include text-truncate();

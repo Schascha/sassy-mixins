@@ -1,4 +1,4 @@
-@import '../mixins/embed';
+@import '../src/mixins/embed';
 
 .embed {
 	@include embed-container();

@@ -1,0 +1,28 @@
+/* stylelint-disable color-named */
+@import '../src/mixins/mq';
+
+$mobile: 600px !default;
+$tablet: 900px !default;
+$desk: 1200px !default;
+
+.breakpoint {
+	@include mq($mobile) {
+		background: green;
+	}
+
+	@include mq($tablet) {
+		background: blue;
+	}
+
+	@include mq($desk) {
+		background: yellow;
+	}
+
+	@include mq($tablet, $desk - 1px) {
+		background: orange;
+	}
+
+	@include mq($max: $mobile - 1px) {
+		background: purple;
+	}
+}

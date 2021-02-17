@@ -1,4 +1,5 @@
-@import '../mixins/theme';
+/* stylelint-disable color-named */
+@import '../src/mixins/theme';
 
 $theme: 'foo';
 

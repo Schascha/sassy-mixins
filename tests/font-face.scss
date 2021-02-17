@@ -1,4 +1,4 @@
-@import '../mixins/font-face';
+@import '../src/mixins/font-face';
 
 @include font-face('OpenSans', '../fonts/OpenSans-Regular', $svg: 'OpenSansRegular');
 

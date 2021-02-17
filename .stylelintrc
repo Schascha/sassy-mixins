@@ -1,0 +1,14 @@
+{
+  "extends": "@schascha/stylelint-config",
+	"rules": {
+		"max-nesting-depth": [
+			3,
+			{
+				"ignoreAtRules": [
+					"if",
+					"else"
+				]
+			}
+		]
+	}
+}
