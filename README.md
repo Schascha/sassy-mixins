@@ -4,12 +4,13 @@
 
 > Just some Sass mixins
 
+- [Usage](#usage)
 - [Mixins](#mixins)
+	- [Accessibility](#accessibility)
 	- [Breakpoint](#breakpoint)
 	- [Clearfix](#clearfix)
 	- [Embed](#embed)
 	- [Font-Face](#font-face)
-	- [Hidden](#hidden)
 	- [Position](#position)
 	- [Text-Truncate](#text-truncate)
 	- [Theme](#theme)
@@ -18,10 +19,38 @@
 
 [Further examples](./tests/)
 
-## Mixins
+## Usage
 
 ```scss
-@import 'sassy-mixins/mixins';
+@import '@schascha/sassy-mixins';
+```
+
+## Mixins
+
+### Accessibility
+
+Only display content to screen readers.
+
+```scss
+.sr-only {
+	@include sr-only();
+}
+```
+
+Compiles to:
+
+```css
+.sr-only {
+	overflow: hidden;
+	position: absolute;
+	margin: -1px;
+	padding: 0;
+	width: 1px;
+	height: 1px;
+	clip: rect(0, 0, 0, 0);
+	border-width: 0;
+	white-space: nowrap;
+}
 ```
 
 ### Breakpoint
@@ -183,32 +212,6 @@ Compiles to:
 }
 ```
 
-### Hidden
-
-Only display content to screen readers.
-
-```scss
-.hidden {
-	@include hidden();
-}
-```
-
-Compiles to:
-
-```css
-.hidden {
-	overflow: hidden;
-	position: absolute;
-	margin: -1px;
-	padding: 0;
-	width: 1px;
-	height: 1px;
-	clip: rect(0, 0, 0, 0);
-	border-width: 0;
-	white-space: nowrap;
-}
-```
-
 ### Position
 
 ```scss
@@ -298,10 +301,6 @@ Compiles to:
 ```
 
 ## Functions
-
-```scss
-@import 'sassy-mixins/functions';
-```
 
 ### Font-Size
 

@@ -8,7 +8,7 @@
     "css",
     "mixin"
   ],
-  "main": "src/_mixins.scss",
+  "main": "src/_sassy-mixins.scss",
   "scripts": {
     "build": "sass --style expanded tests:dist",
     "start": "npm run build -- --watch",
@@ -21,10 +21,7 @@
     "sass": "^1.32.7",
     "stylelint": "^13.10.0"
   },
-	"exports": {
-		"./": "./src/"
-	},
-	"files": [
-		"src/**/*.scss"
-	]
+  "files": [
+    "src/**/*.scss"
+  ]
 }
