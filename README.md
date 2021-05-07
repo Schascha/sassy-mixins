@@ -4,19 +4,6 @@
 
 > Just some Sass mixins
 
-- [Usage](#usage)
-- [Mixins](#mixins)
-	- [Accessibility](#accessibility)
-	- [Breakpoint](#breakpoint)
-	- [Clearfix](#clearfix)
-	- [Embed](#embed)
-	- [Font-Face](#font-face)
-	- [Position](#position)
-	- [Text-Truncate](#text-truncate)
-	- [Theme](#theme)
-- [Functions](#functions)
-	- [Font-Size](#font-size)
-
 [Further examples](./tests/)
 
 ## Usage
@@ -116,6 +103,31 @@ Compiles to:
 	.breakpoint {
 		background: purple;
 	}
+}
+```
+
+### Button-Reset
+
+Reset button or other form field brower default styles.
+
+```scss
+button {
+	@include button-reset();
+}
+```
+
+Compiles to:
+
+```css
+button {
+	appearance: none;
+	background: none;
+	border: 0;
+	outline: 0;
+	color: inherit;
+	font: inherit;
+	line-height: inherit;
+	text-align: inherit;
 }
 ```
 
