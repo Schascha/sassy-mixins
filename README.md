@@ -6,6 +6,14 @@
 
 [Further examples](./tests/)
 
+## Installation
+
+You can use sassy-mixins in your project by installing it using [npm](https://www.npmjs.com/package/@schascha/sassy-mixins):
+
+```sh
+npm i @schascha/sassy-mixins
+```
+
 ## Usage
 
 ```scss
