@@ -4,7 +4,7 @@
 
 > Just some Sass mixins
 
-[Further examples](./tests/)
+[Examples](./tests/)
 
 ## Installation
 
@@ -352,7 +352,7 @@ h1 > span {
 
 ## Bugs?
 
-Please let me know: https://github.com/Schascha/stylelint-config/issues
+Please let me know: https://github.com/Schascha/sassy-mixins/issues
 
 ## Buy me a Coffee :coffee:
 
