@@ -2,7 +2,7 @@
 
 ![Build](https://github.com/Schascha/sassy-mixins/workflows/Build/badge.svg)
 
-> Just some Sass mixins
+> Just some useful sass mixins that I use in my projects
 
 [Examples](./tests/)
 
