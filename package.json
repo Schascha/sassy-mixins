@@ -18,6 +18,7 @@
   "license": "MIT",
   "devDependencies": {
     "@schascha/stylelint-config": "^0.0.5",
+    "postcss": "^8.3.0",
     "sass": "^1.32.7",
     "stylelint": "^13.10.0"
   },
