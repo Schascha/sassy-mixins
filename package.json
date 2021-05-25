@@ -14,7 +14,7 @@
     "start": "npm run build -- --watch",
     "test": "stylelint **/*.scss --syntax scss"
   },
-  "author": "Sascha Künstler <contact.schascha@gmail.com> (http://www.schaschaweb.de)",
+  "author": "Sascha Künstler <contact.schascha@gmail.com> (https://www.schaschaweb.de)",
   "license": "MIT",
   "devDependencies": {
     "@schascha/stylelint-config": "^0.0.5",
