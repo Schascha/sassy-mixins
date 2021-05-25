@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 $font-size-base: 16px !default;
 
 @function font-size($pixels, $context: $font-size-base) {
@@ -9,7 +11,7 @@ $font-size-base: 16px !default;
 		$context: $context * 1px;
 	}
 
-	@return $pixels / $context;
+	@return math.div($pixels, $context);
 }
 
 @function em($pixels, $context: $font-size-base) {

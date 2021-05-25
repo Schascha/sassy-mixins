@@ -1,9 +1,11 @@
+@use 'sass:math';
+
 @mixin embed-container($ratio: '16:9') {
 	position: relative;
 	height: 0;
 
 	@if type_of($ratio) == list {
-		padding-bottom: percentage(nth($ratio, 2) / nth($ratio, 1));
+		padding-bottom: percentage(math.div(nth($ratio, 2), nth($ratio, 1)));
 	} @else if type_of($ratio) == string {
 		@if $ratio == '16:9' {
 			padding-bottom: 56.25%;
