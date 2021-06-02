@@ -1,6 +1,7 @@
 # sassy-mixins
 
-![Build](https://github.com/Schascha/sassy-mixins/workflows/Build/badge.svg)
+[![Build](https://github.com/Schascha/sassy-mixins/workflows/Build/badge.svg)](https://github.com/Schascha/sassy-mixins/actions)
+[![npm](https://img.shields.io/npm/v/@schascha/sassy-mixins)](https://www.npmjs.com/package/@schascha/sassy-mixins)
 
 > Just some useful sass mixins that I use in my projects
 
@@ -20,9 +21,9 @@ npm i @schascha/sassy-mixins
 @import '@schascha/sassy-mixins';
 ```
 
-## Mixins
+### Mixins
 
-### Accessibility
+#### Accessibility
 
 Only display content to screen readers.
 
@@ -48,7 +49,7 @@ Compiles to:
 }
 ```
 
-### Breakpoint
+#### Breakpoint
 
 Helper to organize your media queries.
 
@@ -114,7 +115,7 @@ Compiles to:
 }
 ```
 
-### Button-Reset
+#### Button-Reset
 
 Reset button or other form field brower default styles.
 
@@ -139,7 +140,7 @@ button {
 }
 ```
 
-### Clearfix
+#### Clearfix
 
 ```scss
 .clearfix {
@@ -157,7 +158,7 @@ Compiles to:
 }
 ```
 
-### Embed
+#### Embed
 
 Responsive embeds, like videos or iFrames. By default the ratio is 16:9. Other options are
 '4:3', '1:2', '2:1', '1:1' or custom numbers. Also accepts lists.
@@ -197,7 +198,7 @@ Compiles to:
 }
 ```
 
-### Font-Face
+#### Font-Face
 
 ```scss
 @include font-face('OpenSans', '../fonts/OpenSans-Regular', $svg: 'OpenSansRegular');
@@ -232,7 +233,7 @@ Compiles to:
 }
 ```
 
-### Position
+#### Position
 
 ```scss
 .absolute {
@@ -280,7 +281,7 @@ Compiles to:
 }
 ```
 
-### Text-Truncate
+#### Text-Truncate
 
 ```scss
 .text-truncate {
@@ -298,7 +299,7 @@ Compiles to:
 }
 ```
 
-### Theme
+#### Theme
 
 Add styles depending on a theme variable.
 
@@ -320,9 +321,9 @@ Compiles to:
 }
 ```
 
-## Functions
+### Functions
 
-### Font-Size
+#### Font-Size
 
 A font-size helper function for em and rem units.
 
@@ -350,7 +351,7 @@ h1 > span {
 }
 ```
 
-## Bugs?
+## Bugs? :bug:
 
 Please let me know: https://github.com/Schascha/sassy-mixins/issues
 
