@@ -2,6 +2,7 @@
 
 [![Build](https://github.com/Schascha/sassy-mixins/workflows/Build/badge.svg)](https://github.com/Schascha/sassy-mixins/actions)
 [![npm](https://img.shields.io/npm/v/@schascha/sassy-mixins)](https://www.npmjs.com/package/@schascha/sassy-mixins)
+[![install size](https://packagephobia.com/badge?p=@schascha/sassy-mixins)](https://packagephobia.com/result?p=@schascha/sassy-mixins)
 
 > Just some useful sass mixins that I use in my projects
 
@@ -351,11 +352,11 @@ h1 > span {
 }
 ```
 
-## Bugs? :bug:
+## Bugs? 🐛
 
 Please let me know: https://github.com/Schascha/sassy-mixins/issues
 
-## Buy me a Coffee :coffee:
+## Buy me a Coffee ☕
 
 Support this project and [others](https://github.com/Schascha?tab=repositories) via [PayPal](https://www.paypal.me/LosZahlos). Thanks
 
