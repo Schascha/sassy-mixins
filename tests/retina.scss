@@ -1,0 +1,10 @@
+@import '../src/mixins/retina';
+
+.image {
+	background-image: url('image.jpg');
+
+	@include retina() {
+		background-image: url('image@2x.jpg');
+		background-size: contain;
+	}
+}

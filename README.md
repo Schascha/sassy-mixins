@@ -282,6 +282,33 @@ Compiles to:
 }
 ```
 
+#### Retina
+
+```scss
+.image {
+	background-image: url('image.jpg');
+
+	@include retina() {
+		background-image: url('image@2x.jpg');
+		background-size: contain;
+	}
+}
+```
+
+Compiles to:
+```scss
+.image {
+	background-image: url("image.jpg");
+}
+
+@media only screen and (min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx) {
+	.image {
+		background-image: url("image@2x.jpg");
+		background-size: contain;
+	}
+}
+```
+
 #### Text-Truncate
 
 ```scss
